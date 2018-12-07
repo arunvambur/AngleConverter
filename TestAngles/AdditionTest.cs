@@ -15,7 +15,7 @@ namespace TestAngles
 
             Angle add = degree + degree1;
 
-            Assert.IsTrue(add.Deg == 60);
+            Assert.IsTrue(add.Metric == 60);
             
         }
 
@@ -27,7 +27,7 @@ namespace TestAngles
 
             Angle add = degree + degree1;
 
-            Assert.IsTrue(add.Rad == 1.5);
+            Assert.IsTrue(add.Metric == 1.5);
 
         }
 

@@ -10,27 +10,22 @@ namespace Angles
     {
         public Radiant(double _rad)
         {
-            rad = _rad;
+            angle = _rad;
         }
 
         protected override Angle Add(Angle angle)
         {
-            return new Radiant(this.Rad + angle.Rad);
-        }
-
-        protected override Angle Convert(Angle angle)
-        {
-            return new Radiant(angle.ToRadiant());            
+            return new Radiant(this.angle + angle.ToRadiant());
         }
 
         public override double ToDegree()
         {
-            return (180 / Math.PI) * rad;
+            return (180 / Math.PI) * angle;
         }
 
         public override double ToRadiant()
         {
-            return rad;
+            return angle;
         }
     }
 }

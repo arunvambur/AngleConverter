@@ -12,7 +12,7 @@ namespace TestAngles
         {
             Angle degree = new Degree(90);
 
-            double radiant = degree.Rad;
+            double radiant = degree.ToRadiant();
 
             Assert.IsTrue(radiant > 1.5 && radiant < 1.6);
         }
@@ -22,7 +22,7 @@ namespace TestAngles
         {
             Angle radiant = new Radiant(1.5);
 
-            double degree = radiant.Deg;
+            double degree = radiant.ToDegree();
 
             Assert.IsTrue(degree > 85 && degree < 86);
         }
