@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Angles.Converter;
 
-namespace Angles
+using AnglesExtended.Converter;
+
+namespace AnglesExtended
 {
-    public class Degree : Angle
+    public class Degree : Angles.Degree
     {
         private void Default()
         {
@@ -26,21 +27,22 @@ namespace Angles
             angle = _deg;
         }
 
-        public Degree(double _deg, IAngleConverter angleConverter)
+        public Degree(double _deg, Angles.Converter.IAngleConverter angleConverter)
         {
             angle = _deg;
             AngleConverter = angleConverter;
         }
 
-        public static implicit operator Degree(Radiant angle)
+        public static implicit operator Degree(Gradian angle)
         {
             DegreeConverter dc = new DegreeConverter();
             return new Degree(dc.Convert(angle));
         }
 
-        protected override Angle Add(Angle angle)
+        public static implicit operator Degree(Angles.Radiant angle)
         {
-            return new Degree(this.Metric + AngleConverter.Convert(angle));
+            DegreeConverter dc = new DegreeConverter();
+            return new Degree(dc.Convert(angle));
         }
     }
 }

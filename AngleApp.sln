@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angles", "Angles\Angles.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAngles", "TestAngles\TestAngles.csproj", "{39747CD3-5252-4350-8B9F-C623A9C650C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnglesExtended", "AnglesExtended\AnglesExtended.csproj", "{414B394E-4B8B-4683-96B8-793CB41EF512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnglesExtended", "TestAnglesExtended\TestAnglesExtended.csproj", "{78692932-83B1-483C-9977-606ABBEF9540}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{39747CD3-5252-4350-8B9F-C623A9C650C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39747CD3-5252-4350-8B9F-C623A9C650C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39747CD3-5252-4350-8B9F-C623A9C650C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414B394E-4B8B-4683-96B8-793CB41EF512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414B394E-4B8B-4683-96B8-793CB41EF512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414B394E-4B8B-4683-96B8-793CB41EF512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414B394E-4B8B-4683-96B8-793CB41EF512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78692932-83B1-483C-9977-606ABBEF9540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78692932-83B1-483C-9977-606ABBEF9540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78692932-83B1-483C-9977-606ABBEF9540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78692932-83B1-483C-9977-606ABBEF9540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

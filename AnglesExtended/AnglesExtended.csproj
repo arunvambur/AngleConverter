@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{204B1238-CBAB-4D0F-A519-77580300B452}</ProjectGuid>
+    <ProjectGuid>{414B394E-4B8B-4683-96B8-793CB41EF512}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Angles</RootNamespace>
-    <AssemblyName>Angles</AssemblyName>
+    <RootNamespace>AnglesExtended</RootNamespace>
+    <AssemblyName>AnglesExtended</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,13 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Angle.cs" />
     <Compile Include="Converter\DegreeConverter.cs" />
-    <Compile Include="Converter\IAngleConverter.cs" />
+    <Compile Include="Converter\GradianConverter.cs" />
     <Compile Include="Converter\RadiantConverter.cs" />
     <Compile Include="Degree.cs" />
+    <Compile Include="Gradian.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Radiant.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Angles\Angles.csproj">
+      <Project>{204b1238-cbab-4d0f-a519-77580300b452}</Project>
+      <Name>Angles</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
