@@ -59,20 +59,6 @@ namespace AnglesExtended
             throw new NotImplementedException();
         }
 
-        protected override Angle Mul(Angle angle)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override Angle Div(Angle angle)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override Angle Mod(Angle angle)
-        {
-            throw new NotImplementedException();
-        }
 
         protected override bool Lessthan(Angle angle)
         {
@@ -125,6 +111,21 @@ namespace AnglesExtended
         }
 
         protected override void Validate()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Angle Mul(double mul)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Angle Div(double div)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Angle Mod(double mod)
         {
             throw new NotImplementedException();
         }

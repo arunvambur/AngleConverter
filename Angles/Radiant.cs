@@ -69,19 +69,19 @@ namespace Angles
             return new Radiant(this.value - AngleConverter.Convert(angle));
         }
 
-        protected override Angle Mul(Angle angle)
+        protected override Angle Mul(double mul)
         {
-            return new Radiant(this.value * AngleConverter.Convert(angle));
+            return new Radiant(this.value * mul);
         }
 
-        protected override Angle Div(Angle angle)
+        protected override Angle Div(double div)
         {
-            return new Radiant(this.value / AngleConverter.Convert(angle));
+            return new Radiant(this.value / div );
         }
 
-        protected override Angle Mod(Angle angle)
+        protected override Angle Mod(double mod)
         {
-            return new Radiant(this.value % AngleConverter.Convert(angle));
+            return new Radiant(this.value % mod);
         }
 
         protected override bool Lessthan(Angle angle)

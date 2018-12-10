@@ -51,21 +51,21 @@ namespace Angles
         /// </summary>
         /// <param name="angle">Angle to be multiplied by</param>
         /// <returns></returns>
-        protected abstract Angle Mul(Angle angle);
+        protected abstract Angle Mul(double mul);
 
         /// <summary>
         /// Force sub class to implement division operation
         /// </summary>
         /// <param name="angle">Angle to be divided by</param>
         /// <returns></returns>
-        protected abstract Angle Div(Angle angle);
+        protected abstract Angle Div(double div);
 
         /// <summary>
         /// Force sub class to implement modulo operation
         /// </summary>
         /// <param name="angle"></param>
         /// <returns></returns>
-        protected abstract Angle Mod(Angle angle);
+        protected abstract Angle Mod(double mod);
 
         /// <summary>
         /// Force sub class to implement less than operation
@@ -170,10 +170,9 @@ namespace Angles
         /// <param name="op1">Left operand</param>
         /// <param name="op2">Right operand</param>
         /// <returns>New Angle with both angles multiplied</returns>
-        public static Angle operator *(Angle op1, Angle op2)
+        public static Angle operator *(Angle op1, double op2)
         {
             op1.PreValidate();
-            op2.PreValidate();
 
             return op1.Mul(op2);
         }
@@ -184,10 +183,9 @@ namespace Angles
         /// <param name="op1">Left operand</param>
         /// <param name="op2">Right operand</param>
         /// <returns>New Angle with left angle dividedby right angle</returns>
-        public static Angle operator /(Angle op1, Angle op2)
+        public static Angle operator /(Angle op1, double op2)
         {
             op1.PreValidate();
-            op2.PreValidate();
 
             return op1.Div(op2);
         }
@@ -198,10 +196,9 @@ namespace Angles
         /// <param name="op1">Left operand</param>
         /// <param name="op2">Right operand</param>
         /// <returns>Mod of left angle with right angle</returns>
-        public static Angle operator %(Angle op1, Angle op2)
+        public static Angle operator %(Angle op1, double op2)
         {
             op1.PreValidate();
-            op2.PreValidate();
 
             return op1.Mod(op2);
         }

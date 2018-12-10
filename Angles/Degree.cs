@@ -72,19 +72,19 @@ namespace Angles
             return new Degree(this.Value - AngleConverter.Convert(angle));
         }
 
-        protected override Angle Mul(Angle angle)
+        protected override Angle Mul(double mul)
         {
-            return new Degree(this.Value * AngleConverter.Convert(angle));
+            return new Degree(this.Value * mul);
         }
 
-        protected override Angle Div(Angle angle)
+        protected override Angle Div(double div)
         {
-            return new Degree(this.Value / AngleConverter.Convert(angle));
+            return new Degree(this.Value / div);
         }
 
-        protected override Angle Mod(Angle angle)
+        protected override Angle Mod(double mod)
         {
-            return new Degree(this.Value % AngleConverter.Convert(angle));
+            return new Degree(this.Value % mod);
         }
 
         protected override bool Lessthan(Angle angle)
