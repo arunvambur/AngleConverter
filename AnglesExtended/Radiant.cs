@@ -8,6 +8,9 @@ using AnglesExtended.Converter;
 
 namespace AnglesExtended
 {
+    /// <summary>
+    /// Concrete implementation of Radiant converter, support casting between different types of angles
+    /// </summary>
     public class Radiant : Angles.Radiant
     {
         private void Default()
@@ -23,12 +26,12 @@ namespace AnglesExtended
         public Radiant(double _deg)
         {
             Default();
-            angle = _deg;
+            value = _deg;
         }
 
         public Radiant(double _deg, Angles.Converter.IAngleConverter angleConverter)
         {
-            angle = _deg;
+            value = _deg;
             AngleConverter = angleConverter;
         }
 

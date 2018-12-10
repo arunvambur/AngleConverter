@@ -9,6 +9,9 @@ using AnglesExtended.Converter;
 
 namespace AnglesExtended
 {
+    /// <summary>
+    /// Concrete implementation of Degree converter, support casting between different types of angles
+    /// </summary>
     public class Degree : Angles.Degree
     {
         private void Default()
@@ -24,12 +27,12 @@ namespace AnglesExtended
         public Degree(double _deg)
         {
             Default();
-            angle = _deg;
+            value = _deg;
         }
 
         public Degree(double _deg, Angles.Converter.IAngleConverter angleConverter)
         {
-            angle = _deg;
+            value = _deg;
             AngleConverter = angleConverter;
         }
 

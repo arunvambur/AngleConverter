@@ -14,7 +14,7 @@ namespace AnglesExtended.Converter
         public double Convert(Angle angle)
         {
             if (angle is Gradian)
-                return (180/200)* angle.Metric;
+                return (180.0/200.0)* angle.Value;
             else
             {
                 Angles.Converter.DegreeConverter dc = new Angles.Converter.DegreeConverter();

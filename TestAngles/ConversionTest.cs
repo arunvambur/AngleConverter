@@ -19,7 +19,7 @@ namespace TestAngles
             //TestDegreeToRadiantByCasting
             Degree degree1 = new Degree(90);
             Radiant radiant1 = degree1;
-            Assert.IsTrue(radiant1.Metric > 1.5 && radiant1.Metric < 1.6);
+            Assert.IsTrue(radiant1.Value > 1.5 && radiant1.Value < 1.6);
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace TestAngles
             //TestRadiantToDegreeByCasting
             Radiant radiant1 = new Radiant(1.5);
             Degree degree1 = radiant1;
-            Assert.IsTrue(degree1.Metric > 85 && degree1.Metric < 86);
+            Assert.IsTrue(degree1.Value > 85 && degree1.Value < 86);
 
         }
         

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Angle.cs" />
+    <Compile Include="AngleOutOfRangeException.cs" />
     <Compile Include="Converter\DegreeConverter.cs" />
     <Compile Include="Converter\IAngleConverter.cs" />
     <Compile Include="Converter\RadiantConverter.cs" />

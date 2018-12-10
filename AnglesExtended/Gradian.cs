@@ -10,6 +10,9 @@ using AnglesExtended.Converter;
 
 namespace AnglesExtended
 {
+    /// <summary>
+    /// Concrete implementation of Gradian converter
+    /// </summary>
     public class Gradian : Angle
     {
         private void Default()
@@ -25,12 +28,12 @@ namespace AnglesExtended
         public Gradian(double grad)
         {
             Default();
-            angle = grad;
+            value = grad;
         }
 
         public Gradian(double grad, IAngleConverter angleConverter)
         {
-            angle = grad;
+            value = grad;
             AngleConverter = angleConverter;
         }
 
@@ -47,6 +50,81 @@ namespace AnglesExtended
         }
 
         protected override Angle Add(Angle angle)
+        {
+            return new Degree(this.Value + AngleConverter.Convert(angle));
+        }
+
+        protected override Angle Sub(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Angle Mul(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Angle Div(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Angle Mod(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override bool Lessthan(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override bool GreaterThan(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override bool Equal(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override bool NotEqual(Angle angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double Sin()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double Cos()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double Tan()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double ArcSin()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double ArcCos()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double ArcTan()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Validate()
         {
             throw new NotImplementedException();
         }

@@ -8,8 +8,14 @@ using Angles.Converter;
 
 namespace Angles
 {
+    /// <summary>
+    /// Implementation for radiant unit
+    /// </summary>
     public class Radiant : Angle
     {
+        /// <summary>
+        /// Default angle converter
+        /// </summary>
         private void Default()
         {
             AngleConverter = new RadiantConverter();
@@ -20,18 +26,33 @@ namespace Angles
             Default();
         }
 
-        public Radiant(double _rad)
+        /// <summary>
+        /// Initializes Radiant type
+        /// </summary>
+        /// <param name="rad">Angle in radiant unit</param>
+        public Radiant(double rad)
         {
             Default();
-            angle = _rad;
+            value = rad;
+            Validate();
         }
 
-        public Radiant(double _rad, IAngleConverter angleConverter)
+        /// <summary>
+        /// Initializes Radiant type
+        /// </summary>
+        /// <param name="rad">Angle in radiant unit</param>
+        /// <param name="angleConverter">Radiant angle converter</param>
+        public Radiant(double rad, IAngleConverter angleConverter)
         {
-            angle = _rad;
+            value = rad;
             AngleConverter = angleConverter;
+            Validate();
         }
 
+        /// <summary>
+        /// Cast Degree type to Radiant type
+        /// </summary>
+        /// <param name="angle">Degree</param>
         public static implicit operator Radiant(Degree angle)
         {
             RadiantConverter rc = new RadiantConverter();
@@ -40,8 +61,83 @@ namespace Angles
 
         protected override Angle Add(Angle angle)
         {
-            return new Radiant(this.angle + AngleConverter.Convert(angle));
+            return new Radiant(this.value + AngleConverter.Convert(angle));
         }
 
+        protected override Angle Sub(Angle angle)
+        {
+            return new Radiant(this.value - AngleConverter.Convert(angle));
+        }
+
+        protected override Angle Mul(Angle angle)
+        {
+            return new Radiant(this.value * AngleConverter.Convert(angle));
+        }
+
+        protected override Angle Div(Angle angle)
+        {
+            return new Radiant(this.value / AngleConverter.Convert(angle));
+        }
+
+        protected override Angle Mod(Angle angle)
+        {
+            return new Radiant(this.value % AngleConverter.Convert(angle));
+        }
+
+        protected override bool Lessthan(Angle angle)
+        {
+            return this.value < AngleConverter.Convert(angle);
+        }
+
+        protected override bool GreaterThan(Angle angle)
+        {
+            return this.value > AngleConverter.Convert(angle);
+        }
+
+        protected override bool Equal(Angle angle)
+        {
+            return this.value == AngleConverter.Convert(angle);
+        }
+
+        protected override bool NotEqual(Angle angle)
+        {
+            return this.value != AngleConverter.Convert(angle);
+        }
+
+        protected override double Sin()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double Cos()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double Tan()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double ArcSin()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double ArcCos()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override double ArcTan()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Validate()
+        {
+            if (value < 0 || value > 6.28)
+                new AngleOutOfRangeException("The degree is out of range", Value, 0, 6.28);
+        }
     }
 }

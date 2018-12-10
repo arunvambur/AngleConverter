@@ -14,11 +14,11 @@ namespace AnglesExtended.Converter
         public double Convert(Angle angle)
         {
             if (angle is Gradian)
-                return angle.Metric;
-            else if (angle is Degree)
-                return (200/180) * angle.Metric;
-            else if (angle is Radiant)
-                return (200/Math.PI) * angle.Metric;
+                return angle.Value;
+            else if (angle is Degree || angle is Angles.Degree)
+                return (200.0/180.0) * angle.Value;
+            else if (angle is Radiant || angle is Angles.Radiant)
+                return (200.0/Math.PI) * angle.Value;
             else
                 throw new ArgumentException("Invalid anglular unit passed", "angle");
 
