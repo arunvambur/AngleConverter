@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Angles
 {
+    /// <summary>
+    /// Quadrant Enumeration
+    /// </summary>
     public enum Quadrant
     {
         /// <summary>
