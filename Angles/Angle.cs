@@ -14,6 +14,7 @@ namespace Angles
     public abstract class Angle
     {
         protected double value;
+        protected Direction direction;
 
         /// <summary>
         /// Converter to convert the angle between diffeent angular units
@@ -99,37 +100,37 @@ namespace Angles
         /// Trignometric function Sine
         /// </summary>
         /// <returns></returns>
-        protected abstract double Sin();
+        public abstract double Sin();
 
         /// <summary>
         /// Trignometric function cosine
         /// </summary>
         /// <returns></returns>
-        protected abstract double Cos();
+        public abstract double Cos();
 
         /// <summary>
         /// Trignometric function Tan
         /// </summary>
         /// <returns></returns>
-        protected abstract double Tan();
+        public abstract double Tan();
 
         /// <summary>
         /// Trignometric function inverse Sine
         /// </summary>
         /// <returns></returns>
-        protected abstract double ArcSin();
+        public abstract double ArcSin();
 
         /// <summary>
         /// Trignometric function inverse cosine
         /// </summary>
         /// <returns></returns>
-        protected abstract double ArcCos();
+        public abstract double ArcCos();
 
         /// <summary>
         /// Trignometric function inverse tan
         /// </summary>
         /// <returns></returns>
-        protected abstract double ArcTan();
+        public abstract double ArcTan();
 
         /// <summary>
         /// Forces the Unit class to validate the metric is within the respective range
@@ -258,15 +259,5 @@ namespace Angles
 
             return op1.NotEqual(op2);
         }
-
-        //public override bool Equals(object obj)
-        //{
-        //    return base.Equals(obj);
-        //}
-
-        //public override int GetHashCode()
-        //{
-        //    return base.GetHashCode();
-        //}
     }
 }

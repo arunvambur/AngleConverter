@@ -6,19 +6,14 @@ namespace Angles
 {
     public class MathematicalDirection : Direction
     {
-        public MathematicalDirection(Angle _angle) : base(_angle)
+        public MathematicalDirection() 
         {
             
         }
 
-        public override Quadrant GetQuadrant()
-        {
-            throw new NotImplementedException();
-        }
-
         public static implicit operator MathematicalDirection(CompassDirection direction)
         {
-            return new MathematicalDirection(direction.Angle);
+            return new MathematicalDirection();
         }
     }
 }

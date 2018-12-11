@@ -41,10 +41,37 @@ namespace Angles
         /// Initializes Radiant type
         /// </summary>
         /// <param name="rad">Angle in radiant unit</param>
+        /// <param name="dir">Direction of an angle</param>
+        public Radiant(double rad, Direction dir)
+        {
+            Default();
+            value = rad;
+            direction = dir;
+            Validate();
+        }
+
+        /// <summary>
+        /// Initializes Radiant type
+        /// </summary>
+        /// <param name="rad">Angle in radiant unit</param>
+        /// <param name="dir">Direction of an angle</param>
         /// <param name="angleConverter">Radiant angle converter</param>
         public Radiant(double rad, IAngleConverter angleConverter)
         {
             value = rad;
+            AngleConverter = angleConverter;
+            Validate();
+        }
+
+        /// <summary>
+        /// Initializes Radiant type
+        /// </summary>
+        /// <param name="rad">Angle in radiant unit</param>
+        /// <param name="angleConverter">Radiant angle converter</param>
+        public Radiant(double rad, Direction dir, IAngleConverter angleConverter)
+        {
+            value = rad;
+            direction = dir;
             AngleConverter = angleConverter;
             Validate();
         }
@@ -104,34 +131,34 @@ namespace Angles
             return this.value != AngleConverter.Convert(angle);
         }
 
-        protected override double Sin()
+        public override double Sin()
         {
-            throw new NotImplementedException();
+            return Math.Sin(Value);
         }
 
-        protected override double Cos()
+        public override double Cos()
         {
-            throw new NotImplementedException();
+            return Math.Cos(Value);
         }
 
-        protected override double Tan()
+        public override double Tan()
         {
-            throw new NotImplementedException();
+            return Math.Tan(value);
         }
 
-        protected override double ArcSin()
+        public override double ArcSin()
         {
-            throw new NotImplementedException();
+            return 1.0 / Math.Sin(Value);
         }
 
-        protected override double ArcCos()
+        public override double ArcCos()
         {
-            throw new NotImplementedException();
+            return 1.0 / Math.Cos(Value);
         }
 
-        protected override double ArcTan()
+        public override double ArcTan()
         {
-            throw new NotImplementedException();
+            return 1.0 / Math.Tan(Value);
         }
 
         protected override void Validate()

@@ -59,7 +59,6 @@ namespace AnglesExtended
             throw new NotImplementedException();
         }
 
-
         protected override bool Lessthan(Angle angle)
         {
             throw new NotImplementedException();
@@ -80,32 +79,32 @@ namespace AnglesExtended
             throw new NotImplementedException();
         }
 
-        protected override double Sin()
+        public override double Sin()
         {
             throw new NotImplementedException();
         }
 
-        protected override double Cos()
+        public override double Cos()
         {
             throw new NotImplementedException();
         }
 
-        protected override double Tan()
+        public override double Tan()
         {
             throw new NotImplementedException();
         }
 
-        protected override double ArcSin()
+        public override double ArcSin()
         {
             throw new NotImplementedException();
         }
 
-        protected override double ArcCos()
+        public override double ArcCos()
         {
             throw new NotImplementedException();
         }
 
-        protected override double ArcTan()
+        public override double ArcTan()
         {
             throw new NotImplementedException();
         }

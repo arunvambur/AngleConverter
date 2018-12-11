@@ -32,7 +32,7 @@ namespace Angles
         /// <summary>
         /// Initializes Degree type
         /// </summary>
-        /// <param name="rad">Angle in degree unit</param>
+        /// <param name="deg">Angle in degree unit</param>
         public Degree(double deg)
         {
             Default();
@@ -43,7 +43,34 @@ namespace Angles
         /// <summary>
         /// Initializes Degree type
         /// </summary>
-        /// <param name="rad">Angle in degree unit</param>
+        /// <param name="deg">Angle in degree unit</param>
+        /// <param name="dir">Direction of angle</param>
+        public Degree(double deg, Direction dir)
+        {
+            Default();
+            value = deg;
+            direction = dir;
+            Validate();
+        }
+
+        /// <summary>
+        /// Initializes Degree type
+        /// </summary>
+        /// <param name="deg">Angle in degree unit</param>
+        /// <param name="dir">Direction of angle</param>
+        /// <param name="angleConverter">Degree angle converter</param>
+        public Degree(double deg, Direction dir, IAngleConverter angleConverter)
+        {
+            value = deg;
+            direction = dir;
+            AngleConverter = angleConverter;
+            Validate();
+        }
+
+        /// <summary>
+        /// Initializes Degree type
+        /// </summary>
+        /// <param name="deg">Angle in degree unit</param>
         /// <param name="angleConverter">Degree angle converter</param>
         public Degree(double deg, IAngleConverter angleConverter)
         {
@@ -107,32 +134,32 @@ namespace Angles
             return this.Value != AngleConverter.Convert(angle);
         }
 
-        protected override double Sin()
+        public override double Sin()
         {
             throw new NotImplementedException();
         }
 
-        protected override double Cos()
+        public override double Cos()
         {
             throw new NotImplementedException();
         }
 
-        protected override double Tan()
+        public override double Tan()
         {
             throw new NotImplementedException();
         }
 
-        protected override double ArcSin()
+        public override double ArcSin()
         {
             throw new NotImplementedException();
         }
 
-        protected override double ArcCos()
+        public override double ArcCos()
         {
             throw new NotImplementedException();
         }
 
-        protected override double ArcTan()
+        public override double ArcTan()
         {
             throw new NotImplementedException();
         }
